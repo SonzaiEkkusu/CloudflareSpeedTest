@@ -6,111 +6,108 @@
 [![GitHub Star](https://img.shields.io/github/stars/XIU2/CloudflareSpeedTest.svg?style=flat-square&label=Star&color=00ADD8&logo=github)](https://github.com/XIU2/CloudflareSpeedTest/)
 [![GitHub Fork](https://img.shields.io/github/forks/XIU2/CloudflareSpeedTest.svg?style=flat-square&label=Fork&color=00ADD8&logo=github)](https://github.com/XIU2/CloudflareSpeedTest/)
 
-国外很多网站都在使用 Cloudflare CDN，但分配给中国内地访客的 IP 并不友好（延迟高、丢包多、速度慢）。  
-虽然 Cloudflare 公开了所有 [IP 段](https://www.cloudflare.com/zh-cn/ips/) ，但想要在这么多 IP 中找到适合自己的，怕是要累死，于是就有了这个软件。
+Banyak situs web internasional yang menggunakan Cloudflare CDN, tetapi IP yang dialokasikan untuk pengunjung dari daratan Cina tidak ramah (latensi tinggi, banyak kehilangan paket, kecepatan lambat).  
+Meskipun Cloudflare mengungkapkan semua [rentang IP](https://www.cloudflare.com/zh-cn/ips/), menemukan IP yang sesuai di antara begitu banyak IP dapat sangat melelahkan, jadi software ini dibuat.
 
-**「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP (IPv4+IPv6)**！好用的话**点个`⭐`鼓励一下叭~**
+**"Pilih IP Terbaik" untuk menguji latensi dan kecepatan Cloudflare CDN, dan mendapatkan IP tercepat (IPv4+IPv6)**! Jika bermanfaat, **beri `⭐` sebagai dukungan~**
 
-> _分享我其他开源项目：[**TrackersList.com** - 全网热门 BT Tracker 列表！有效提高 BT 下载速度~](https://github.com/XIU2/TrackersListCollection) <img src="https://img.shields.io/github/stars/XIU2/TrackersListCollection.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
-> _[**UserScript** - 🐵 Github 高速下载、知乎增强、自动无缝翻页、护眼模式 等十几个**油猴脚本**~](https://github.com/XIU2/UserScript) <img src="https://img.shields.io/github/stars/XIU2/UserScript.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
-> _[**SNIProxy** - 🧷 自用的简单 SNI Proxy（支持全平台、全系统、前置代理、配置简单等~](https://github.com/XIU2/SNIProxy) <img src="https://img.shields.io/github/stars/XIU2/SNIProxy.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
+> _Bagikan proyek open-source saya yang lain: [**TrackersList.com** - Daftar Tracker BT Terpopuler di seluruh web! Meningkatkan kecepatan unduh BT secara efektif~](https://github.com/XIU2/TrackersListCollection) <img src="https://img.shields.io/github/stars/XIU2/TrackersListCollection.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
+> _[**UserScript** - 🐵 Unduh cepat Github, peningkatan Zhihu, halaman otomatis tanpa batas, mode perlindungan mata, dan beberapa **skrip pengguna** lainnya~](https://github.com/XIU2/UserScript) <img src="https://img.shields.io/github/stars/XIU2/UserScript.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
+> _[**SNIProxy** - 🧷 Proxy SNI sederhana yang saya gunakan (mendukung semua platform, semua sistem, proxy depan, konfigurasi mudah, dll~](https://github.com/XIU2/SNIProxy) <img src="https://img.shields.io/github/stars/XIU2/SNIProxy.svg?style=flat-square&label=Star&color=4285dd&logo=github" height="16px" />_  
 
-> 本项目也支持对**其他 CDN / 网站 IP** 延迟测速（如：[CloudFront](https://github.com/XIU2/CloudflareSpeedTest/discussions/304)、[Gcore](https://github.com/XIU2/CloudflareSpeedTest/discussions/303) CDN），但下载测速需自行寻找地址
+> Proyek ini juga mendukung pengujian latensi untuk **CDN / IP situs web lainnya** (seperti: [CloudFront](https://github.com/XIU2/CloudflareSpeedTest/discussions/304), [Gcore](https://github.com/XIU2/CloudflareSpeedTest/discussions/303) CDN), tetapi pengujian unduhan perlu mencari alamat sendiri
 
 > [!IMPORTANT]
-> 对于**代理套 Cloudflare CDN** 的忠告，须知这应为**备用方案**，而不应该是**唯一方案**，请勿过度依赖 [#382](https://github.com/XIU2/CloudflareSpeedTest/discussions/382) [#383](https://github.com/XIU2/CloudflareSpeedTest/discussions/383)
-
+> Untuk **proxy yang menggunakan Cloudflare CDN**, perlu diketahui bahwa ini seharusnya menjadi **solusi cadangan**, bukan **satu-satunya solusi**, harap tidak terlalu bergantung pada [#382](https://github.com/XIU2/CloudflareSpeedTest/discussions/382) [#383](https://github.com/XIU2/CloudflareSpeedTest/discussions/383)
 ****
-## \# 快速使用
+## # Cara Cepat Menggunakan
 
-### 下载运行
+### Unduh dan Jalankan
 
-1. 下载编译好的可执行文件（ [Github Releases](https://github.com/XIU2/CloudflareSpeedTest/releases) / [蓝奏云](https://pan.lanpw.com/b0742hkxe) ）并解压。  
-2. 双击运行 `CloudflareST.exe` 文件（Windows 系统），等待测速完成...
+1. Unduh file executable yang sudah dikompilasi ( [Github Releases](https://github.com/XIU2/CloudflareSpeedTest/releases) / [Lanzou Cloud](https://pan.lanpw.com/b0742hkxe) ) dan ekstrak.  
+2. Klik dua kali pada file `CloudflareST.exe` (sistem Windows), tunggu hingga pengujian selesai...
 
 <details>
-<summary><code><strong>「 点击查看 Linux 系统下的使用示例 」</strong></code></summary>
+<summary><code><strong>「 Klik di sini untuk melihat contoh penggunaan di sistem Linux 」</strong></code></summary>
 
 ****
 
-以下命令仅为示例，版本号和文件名请前往 [**Releases**](https://github.com/XIU2/CloudflareSpeedTest/releases) 查看。
-
+Perintah berikut hanya sebagai contoh, periksa [**Releases**](https://github.com/XIU2/CloudflareSpeedTest/releases) untuk nomor versi dan nama file.
 ``` yaml
-# 如果是第一次使用，则建议创建新文件夹（后续更新时，跳过该步骤）
+# Jika ini adalah pertama kalinya Anda menggunakan, disarankan untuk membuat folder baru (langkah ini dapat dilewati pada pembaruan berikutnya)
 mkdir CloudflareST
 
-# 进入文件夹（后续更新，只需要从这里重复下面的下载、解压命令即可）
+# Masuk ke folder (pada pembaruan berikutnya, Anda hanya perlu mengulangi perintah unduh dan ekstrak dari sini)
 cd CloudflareST
 
-# 下载 CloudflareST 压缩包（自行根据需求替换 URL 中 [版本号] 和 [文件名]）
+# Unduh paket CloudflareST (sesuaikan URL dengan [versi] dan [nama file] sesuai kebutuhan)
 wget -N https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# 如果你是在国内网络环境中下载，那么请使用下面这几个镜像加速之一：
+# Jika Anda mengunduh dari lingkungan jaringan domestik, gunakan salah satu dari cermin akselerasi berikut:
 # wget -N https://download.scholar.rr.nu/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # wget -N https://ghproxy.cc/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
 # wget -N https://mirror.ghproxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_linux_amd64.tar.gz
-# 如果下载失败的话，尝试删除 -N 参数（如果是为了更新，则记得提前删除旧压缩包 rm CloudflareST_linux_amd64.tar.gz ）
+# Jika unduhan gagal, coba hapus parameter -N (jika untuk pembaruan, ingat untuk menghapus file zip lama terlebih dahulu rm CloudflareST_linux_amd64.tar.gz)
 
-# 解压（不需要删除旧文件，会直接覆盖，自行根据需求替换 文件名）
+# Ekstrak (tidak perlu menghapus file lama, akan menimpa langsung, sesuaikan nama file sesuai kebutuhan)
 tar -zxf CloudflareST_linux_amd64.tar.gz
 
-# 赋予执行权限
+# Berikan hak akses eksekusi
 chmod +x CloudflareST
 
-# 运行（不带参数）
+# Jalankan (tanpa parameter)
 ./CloudflareST
 
-# 运行（带参数示例）
+# Jalankan (contoh dengan parameter)
 ./CloudflareST -dd -tll 90
 ```
 
-> 如果平**均延迟非常低**（如 0.xx），则说明 CloudflareST **测速时走了代理**，请先关闭代理软件后再测速。  
-> 如果在**路由器**上运行，建议先关闭路由器内的代理（或将其排除），否则测速结果可能会**不准确/无法使用**。
+> Jika **latensi rata-rata sangat rendah** (misalnya 0.xx), ini menunjukkan bahwa CloudflareST **menggunakan proxy** saat pengujian, harap matikan perangkat lunak proxy sebelum melakukan pengujian.  
+> Jika menjalankan di **router**, disarankan untuk mematikan proxy di router (atau mengecualikannya), jika tidak, hasil pengujian mungkin **tidak akurat/tidak dapat digunakan**.
 
 </details>
 
 ****
 
-> _在**手机**上独立运行 CloudflareST 测速的简单教程：**[Android](https://github.com/XIU2/CloudflareSpeedTest/discussions/61)、[Android APP](https://github.com/xianshenglu/cloudflare-ip-tester-app)、[IOS](https://github.com/XIU2/CloudflareSpeedTest/discussions/321)**_
+> _Panduan sederhana untuk menjalankan CloudflareST secara **mandiri di ponsel**: **[Android](https://github.com/XIU2/CloudflareSpeedTest/discussions/61)、[Android APP](https://github.com/xianshenglu/cloudflare-ip-tester-app)、[IOS](https://github.com/XIU2/CloudflareSpeedTest/discussions/321)**_
 
 > [!NOTE]
-> 注意！本软件仅适用于网站，**不支持给使用 UDP 协议的 Cloudflare WARP 优选 IP**，具体见：[#392](https://github.com/XIU2/CloudflareSpeedTest/discussions/392)
+> Perhatian! Perangkat lunak ini hanya berlaku untuk situs web, **tidak mendukung pemilihan IP Cloudflare WARP yang menggunakan protokol UDP**, lihat detailnya di: [#392](https://github.com/XIU2/CloudflareSpeedTest/discussions/392)
 
-### 结果示例
+### Contoh Hasil
 
-测速完毕后，默认会显示**最快的 10 个 IP**，示例：
-
+Setelah pengujian selesai, secara default akan menampilkan **10 IP tercepat**, contoh:
 ``` bash
-IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 (MB/s)
-104.27.200.69     4       4       0.00    146.23    28.64
-172.67.60.78      4       4       0.00    139.82    15.02
-104.25.140.153    4       4       0.00    146.49    14.90
-104.27.192.65     4       4       0.00    140.28    14.07
-172.67.62.214     4       4       0.00    139.29    12.71
-104.27.207.5      4       4       0.00    145.92    11.95
-172.67.54.193     4       4       0.00    146.71    11.55
-104.22.66.8       4       4       0.00    147.42    11.11
-104.27.197.63     4       4       0.00    131.29    10.26
-172.67.58.91      4       4       0.00    140.19    9.14
+Alamat IP         Terkirim   Diterima   Tingkat Kehilangan   Latensi Rata-Rata   Kecepatan Unduh (MB/s)
+104.27.200.69         4         4              0.00                146.23                28.64
+172.67.60.78          4         4              0.00                139.82                15.02
+104.25.140.153        4         4              0.00                146.49                14.90
+104.27.192.65         4         4              0.00                140.28                14.07
+172.67.62.214         4         4              0.00                139.29                12.71
+104.27.207.5          4         4              0.00                145.92                11.95
+172.67.54.193         4         4              0.00                146.71                11.55
+104.22.66.8           4         4              0.00                147.42                11.11
+104.27.197.63         4         4              0.00                131.29                10.26
+172.67.58.91          4         4              0.00                140.19                9.14
 ...
 
-# 如果平均延迟非常低（如 0.xx），则说明 CloudflareST 测速时走了代理，请先关闭代理软件后再测速。
-# 如果在路由器上运行，请先关闭路由器内的代理（或将其排除），否则测速结果可能会不准确/无法使用。
+# Jika latensi rata-rata sangat rendah (misalnya 0.xx), ini menunjukkan bahwa CloudflareST **menggunakan proxy** saat pengujian. Silakan matikan perangkat lunak proxy terlebih dahulu sebelum melakukan pengujian lagi.
+# Jika menjalankan di **router**, disarankan untuk mematikan proxy di router (atau mengecualikannya), jika tidak, hasil pengujian mungkin **tidak akurat/tidak dapat digunakan**.
 
-# 因为每次测速都是在每个 IP 段中随机 IP，所以每次的测速结果都不可能相同，这是正常的！
+# Karena setiap pengujian dilakukan pada IP acak di setiap rentang IP, hasil pengujian setiap kali tidak mungkin sama, ini adalah hal yang normal!
 
-# 注意！我发现电脑开机后第一次测速延迟会明显偏高（手动 TCPing 也一样），后续测速都正常
-# 因此建议大家开机后第一次正式测速前，先随便测几个 IP（无需等待延迟测速完成，只要进度条动了就可以直接关了）
+# Perhatian! Saya menemukan bahwa latensi pengujian pertama setelah komputer dinyalakan akan jauh lebih tinggi (sama seperti TCPing manual), pengujian berikutnya normal.
+# Oleh karena itu, disarankan untuk menguji beberapa IP secara sembarangan setelah menyalakan komputer sebelum melakukan pengujian yang sebenarnya (tidak perlu menunggu pengujian latensi selesai, cukup jika bilah kemajuan bergerak bisa langsung ditutup).
 
-# 软件在 默认参数 下的整个流程大概步骤：
-# 1. 延迟测速（默认 TCPing 模式，HTTPing 模式需要手动加上参数）
-# 2. 延迟排序（延迟 从低到高 排序并按条件过滤，不同丢包率会分开排序，因此可能会有一些延迟低但丢包的 IP 排到后面）
-# 3. 下载测速（从延迟最低的 IP 开始依次下载测速，默认测够 10 个就会停止）
-# 4. 速度排序（速度从高到低排序）
-# 5. 输出结果（通过参数控制是否输出到命令行(-p 0)或输出到文件(-o "")）
+# Proses keseluruhan perangkat lunak dengan parameter default kira-kira langkah-langkahnya adalah:
+# 1. Pengujian latensi (mode default TCPing, mode HTTPing memerlukan parameter manual)
+# 2. Pengurutan latensi (latensi diurutkan dari rendah ke tinggi dan difilter sesuai kondisi, tingkat kehilangan paket yang berbeda akan diurutkan secara terpisah, sehingga beberapa IP dengan latensi rendah tetapi kehilangan paket mungkin berada di belakang)
+# 3. Pengujian unduh (dari IP dengan latensi terendah, lakukan pengujian unduh satu per satu, secara default berhenti setelah 10 IP diuji)
+# 4. Pengurutan kecepatan (kecepatan diurutkan dari tinggi ke rendah)
+# 5. Menampilkan hasil (mengontrol apakah menampilkan hasil di baris perintah (-p 0) atau menulis ke file (-o ""))
 
-# 注意：输出的结果文件 result.csv 通过微软 Excel 表格打开会中文乱码，这是正常的，其他表格软件/记事本都显示正常
+# Perhatian: File hasil output result.csv akan menampilkan karakter China yang tidak dapat dibaca dengan benar di Microsoft Excel, ini normal; perangkat lunak spreadsheet lainnya/notepad menampilkan dengan benar
 ```
 
 测速结果第一行就是**既下载速度最快、又平均延迟最低的最快 IP**！
@@ -133,59 +130,59 @@ IP 地址,已发送,已接收,丢包率,平均延迟,下载速度 (MB/s)
 C:\>CloudflareST.exe -h
 
 CloudflareSpeedTest vX.X.X
-测试 Cloudflare CDN 所有 IP 的延迟和速度，获取最快 IP (IPv4+IPv6)！
+Uji latensi dan kecepatan semua IP Cloudflare CDN, dapatkan IP tercepat (IPv4+IPv6)!
 https://github.com/XIU2/CloudflareSpeedTest
 
-参数：
+Parameter:
     -n 200
-        延迟测速线程；越多延迟测速越快，性能弱的设备 (如路由器) 请勿太高；(默认 200 最多 1000)
+        Jumlah thread pengujian latensi; semakin banyak thread, semakin cepat pengujian latensi, perangkat dengan kinerja rendah (seperti router) sebaiknya tidak menggunakan terlalu banyak; (default 200, maksimum 1000)
     -t 4
-        延迟测速次数；单个 IP 延迟测速的次数；(默认 4 次)
+        Jumlah pengujian latensi; jumlah pengujian latensi untuk setiap IP; (default 4 kali)
     -dn 10
-        下载测速数量；延迟测速并排序后，从最低延迟起下载测速的数量；(默认 10 个)
+        Jumlah pengujian unduh; jumlah pengujian unduh setelah pengujian latensi dan pengurutan berdasarkan latensi terendah; (default 10)
     -dt 10
-        下载测速时间；单个 IP 下载测速最长时间，不能太短；(默认 10 秒)
+        Waktu pengujian unduh; waktu maksimum untuk pengujian unduh setiap IP, tidak boleh terlalu pendek; (default 10 detik)
     -tp 443
-        指定测速端口；延迟测速/下载测速时使用的端口；(默认 443 端口)
+        Port pengujian yang ditentukan; port yang digunakan untuk pengujian latensi/pengujian unduh; (default port 443)
     -url https://cf.xiu2.xyz/url
-        指定测速地址；延迟测速(HTTPing)/下载测速时使用的地址，默认地址不保证可用性，建议自建；
+        Alamat pengujian yang ditentukan; alamat yang digunakan untuk pengujian latensi (HTTPing)/pengujian unduh, alamat default tidak menjamin ketersediaan, disarankan untuk menggunakan alamat yang dibuat sendiri;
 
     -httping
-        切换测速模式；延迟测速模式改为 HTTP 协议，所用测试地址为 [-url] 参数；(默认 TCPing)
-        注意：HTTPing 本质上也算一种 网络扫描 行为，因此如果你在服务器上面运行，需要降低并发(-n)，否则可能会被一些严格的商家暂停服务。
-        如果你遇到 HTTPing 首次测速可用 IP 数量正常，后续测速越来越少甚至直接为 0，但停一段时间后又恢复了的情况，那么也可能是被 运营商、Cloudflare CDN 认为你在网络扫描而 触发临时限制机制，因此才会过一会儿就恢复了，建议降低并发(-n)减少这种情况的发生。
+        Ubah mode pengujian; ubah mode pengujian latensi menjadi protokol HTTP, alamat pengujian yang digunakan adalah parameter [-url]; (default TCPing)
+        Catatan: HTTPing pada dasarnya juga merupakan tindakan pemindaian jaringan, jadi jika Anda menjalankannya di server, turunkan tingkat konkurensi (-n), jika tidak, layanan Anda mungkin akan dihentikan oleh beberapa penyedia yang ketat.
+        Jika Anda mengalami kasus di mana jumlah IP yang dapat diuji dengan HTTPing awalnya normal, tetapi semakin sedikit atau bahkan nol setelahnya, dan kembali normal setelah jeda, ini mungkin karena operator atau CDN Cloudflare menganggap Anda sedang melakukan pemindaian jaringan dan memicu mekanisme pembatasan sementara. Disarankan untuk menurunkan konkurensi (-n) untuk mengurangi kejadian ini.
     -httping-code 200
-        有效状态代码；HTTPing 延迟测速时网页返回的有效 HTTP 状态码，仅限一个；(默认 200 301 302)
+        Kode status yang valid; kode status HTTP yang valid yang dikembalikan oleh halaman selama pengujian latensi HTTPing, hanya satu; (default 200 301 302)
     -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD
-        匹配指定地区；地区名为当地机场三字码，英文逗号分隔，支持小写，支持 Cloudflare、AWS CloudFront，仅 HTTPing 模式可用；(默认 所有地区)
+        Cocokkan wilayah tertentu; nama wilayah dengan kode bandara tiga huruf, dipisahkan dengan koma, mendukung huruf kecil, mendukung Cloudflare, AWS CloudFront, hanya tersedia dalam mode HTTPing; (default semua wilayah)
 
     -tl 200
-        平均延迟上限；只输出低于指定平均延迟的 IP，各上下限条件可搭配使用；(默认 9999 ms)
+        Batas latensi rata-rata; hanya output IP yang memiliki latensi rata-rata di bawah batas yang ditentukan, batas atas dan bawah dapat digunakan bersama; (default 9999 ms)
     -tll 40
-        平均延迟下限；只输出高于指定平均延迟的 IP；(默认 0 ms)
+        Batas bawah latensi rata-rata; hanya output IP yang memiliki latensi rata-rata di atas batas yang ditentukan; (default 0 ms)
     -tlr 0.2
-        丢包几率上限；只输出低于/等于指定丢包率的 IP，范围 0.00~1.00，0 过滤掉任何丢包的 IP；(默认 1.00)
+        Batas tingkat kehilangan paket; hanya output IP yang memiliki tingkat kehilangan paket di bawah atau sama dengan batas yang ditentukan, rentang 0.00~1.00, 0 untuk menyaring IP tanpa kehilangan paket; (default 1.00)
     -sl 5
-        下载速度下限；只输出高于指定下载速度的 IP，凑够指定数量 [-dn] 才会停止测速；(默认 0.00 MB/s)
+        Batas kecepatan unduh; hanya output IP yang memiliki kecepatan unduh di atas batas yang ditentukan, pengujian akan berhenti setelah mencapai jumlah yang ditentukan [-dn]; (default 0.00 MB/s)
 
     -p 10
-        显示结果数量；测速后直接显示指定数量的结果，为 0 时不显示结果直接退出；(默认 10 个)
+        Jumlah hasil yang ditampilkan; langsung menampilkan jumlah hasil yang ditentukan setelah pengujian, 0 berarti tidak menampilkan hasil dan langsung keluar; (default 10)
     -f ip.txt
-        IP段数据文件；如路径含有空格请加上引号；支持其他 CDN IP段；(默认 ip.txt)
+        File data rentang IP; jika jalur mengandung spasi, tambahkan tanda kutip; mendukung rentang IP CDN lainnya; (default ip.txt)
     -ip 1.1.1.1,2.2.2.2/24,2606:4700::/32
-        指定IP段数据；直接通过参数指定要测速的 IP 段数据，英文逗号分隔；(默认 空)
+        Data rentang IP yang ditentukan; langsung menentukan rentang IP yang akan diuji melalui parameter, dipisahkan dengan koma; (default kosong)
     -o result.csv
-        写入结果文件；如路径含有空格请加上引号；值为空时不写入文件 [-o ""]；(默认 result.csv)
+        Tulis file hasil; jika jalur mengandung spasi, tambahkan tanda kutip; jika kosong, tidak menulis ke file [-o ""]; (default result.csv)
 
     -dd
-        禁用下载测速；禁用后测速结果会按延迟排序 (默认按下载速度排序)；(默认 启用)
+        Nonaktifkan pengujian unduh; jika dinonaktifkan, hasil pengujian akan diurutkan berdasarkan latensi (default diurutkan berdasarkan kecepatan unduh); (default aktif)
     -allip
-        测速全部的IP；对 IP 段中的每个 IP (仅支持 IPv4) 进行测速；(默认 每个 /24 段随机测速一个 IP)
+        Uji semua IP; uji setiap IP dalam rentang IP (hanya mendukung IPv4); (default uji satu IP secara acak dalam setiap rentang /24)
 
     -v
-        打印程序版本 + 检查版本更新
+        Tampilkan versi program + periksa pembaruan versi
     -h
-        打印帮助说明
+        Tampilkan petunjuk bantuan
 ```
 
 ### 界面解释
